@@ -7,21 +7,25 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.gray700,
     width: "100%",
     height: 170,
+    alignItems: "center",
+    justifyContent: "center",
   },
   img: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    marginTop: 24,
   },
   containerInput: {
     position: "absolute",
     bottom: -25,
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 24,
+    justifyContent: "center", // Adicionando esta linha para centralizar horizontalmente
+    marginHorizontal: 24,
+    flex: 1,
   },
   input: {
     padding: 16,
+    maxWidth: 300,
     flex: 1,
     height: 54,
     borderColor: colors.gray700,
