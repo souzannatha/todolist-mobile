@@ -1,28 +1,14 @@
-import { View, Image, TextInput, TouchableOpacity } from "react-native";
-import { useState } from "react";
-
+import { View, Image } from "react-native";
 import { styles } from "./style";
+import { Input } from "../Input";
 
 export function Header() {
-  const [isFocused, setIsFocused] = useState(false);
-
   return (
     <View style={styles.header}>
       <View style={styles.img}>
         <Image source={require("../../images/Logo.png")} />
       </View>
-      <View style={styles.containerInput}>
-        <TextInput
-          style={[styles.input, isFocused && styles.focused]}
-          placeholder="Adicione uma nova tarefa"
-          placeholderTextColor="#808080"
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
-        />
-        <TouchableOpacity style={styles.button}>
-          <Image source={require("../../images/plus.png")} />
-        </TouchableOpacity>
-      </View>
+      <Input />
     </View>
   );
 }
